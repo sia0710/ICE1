@@ -9,7 +9,7 @@ package cardtrickice1;
  * step 2: take any card input from user suit,number
  * step 3: user card is in  the array 'card is found'
  *
- * @author sivagamasrinivasan,May 23rd
+ * @author Sia Sia, student Id - 991664745
  */
 public class CardTrickICE1 {
 
@@ -27,7 +27,40 @@ public class CardTrickICE1 {
         }
         //step 2:take input 
         
+      /* Scanner in = new Scanner(System.in);
+        System.out.println("Please select a card: ");
+        String selectSuitCard = in.next();
+        System.out.println("Choose a value between 1 to 13: ");
+        int chooseNumCard = in.nextInt();*/
+        
         //step 3: match with array 
+        
+        Card cardChoosen = new Card();
+        
+        /*cardSelected.setSuits(selectSuitCard);
+        cardSelected.setValue(selectNumCard); */
+        
+        cardChoosen.setValue(5);
+        cardChoosen.setSuits("Spades");
+        
+        boolean foundCard = false;
+        
+        for (Card magicHand1 : magicHand) {
+            if (magicHand1.getValue() == cardChoosen.getValue() && magicHand1.getSuits().equalsIgnoreCase(cardChoosen.getSuits())) {
+                foundCard = true;
+               break;
+            }
+                      
+         }
+             
+         if(foundCard)
+                System.out.println("Congratulations, card selected");
+            else
+                System.out.println("Sorry, card not selected");
+    }
+        
     }
     
-}
+    }
+    
+
