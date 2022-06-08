@@ -8,7 +8,7 @@ package cardtrickice1;
 /** define card value and suits
  * 
  *
- * @author sivagamasrinivasan
+ * @author Sia Sia, Student ID - 991664745
  */
 public class Card 
 {
@@ -47,5 +47,9 @@ public class Card
    //number
     
     //method for suits
-    
+    @Override
+    public String toString(){
+        return "Card: " + this.value + " " + this.suits;
+    }
+
 }
